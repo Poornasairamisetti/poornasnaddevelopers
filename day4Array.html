@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //sort
+        let array = [40,30,20,10];
+        let newArray = array.sort((a, b) => {
+         if (a<b)
+         return -1;
+         else if(a>b)
+         return 1;
+         else
+         return 0;    
+        });
+        console.log(newArray);
+        //reverse
+        let reverseArray = array.reverse();
+        console.log(reverseArray);
+        let employees=[
+            {empNumber:10,empName:'ghagy',empSalary:34000},
+            {empNumber:11,empName:'hwhuh',emoSalary:45000},
+            {empNumber:12,empName:'thfhf',emoSalary:55000},
+            {empNumber:13,empName:'ibbfn',emoSalary:65000},
+            {empNumber:15,empName:'jbshfh',emoSalary:80000},
+        ];
+        let emps = employees.filter((emp)=> emp.empSalary >=50000);
+         console.log(emps);
+         let sorted=employees.sort((a,b)=>{
+            if(a.empSalary< b.empSalary)
+            return -1;
+            else if(a.empSalary>b.empSalary)
+            return 1;
+            else{
+                if(a.empName<b.empName)
+                return -1;
+                else if(a.empName>b.empName)
+                return 1;
+                else
+                return 0;
+            }
+         });
+         console.log(sorted);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

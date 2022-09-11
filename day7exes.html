@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //promises -- pending ,reject,complete
+        let promise = new Promise((resolve,reject)=>{
+            let a =10;
+            let b=2;
+            let c=a / b;
+            if(c>=0)
+               resolve(c);
+               else
+               reject("invalid Data");
+        });
+        promise
+        .then(data => console.log(data))
+        .catch(reason =>console.log(reason))
+        .finally(() => console.log("finally block"));
+
+     </script>
+</head>
+<body>
+    
+</body>
+</html>

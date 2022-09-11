@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Customer(id,name,amount){
+            var custid=id;
+            var custName=name;
+            var custAmount=amount;
+            this.showData = function(){
+                console.log(custid,custName,custAmount);
+            }
+        }
+        let cust = new Customer(121,'gfhjcjnjs',25000);
+        cust.showData();
+        let cust2=new Customer(123,"huhuh",5688);
+        cust2.showData();
+    </script>
+    <script>
+     //Event handling
+     function show(){
+        alert("this is show function");
+     }
+     
+    </script>
+</head>
+<body>
+    <input type="button" value="Click Me" onclick="show()">
+</body>
+</html>

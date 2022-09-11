@@ -1,0 +1,1012 @@
+Question 1:
+
+
+a) What is Java? What is features of java? 
+Java:
+Java is a programming language,Java is a platform independent we can run java in any platform.
+Java is a high level, robust, object-oriented and secure programming language.
+syntax:
+class Simple{  
+    public static void main(String args[]){  
+     System.out.println("Hello world");  
+    }  
+}  
+Applications:
+There are mainly 4 types of applications that can be created using Java programming:
+1) Standalone Application
+Standalone applications are also known as desktop applications or window-based applications. These are traditional software that we need to install on every machine. 
+Examples of standalone application are Media player, antivirus, etc. 
+AWT and Swing are used in Java for creating standalone applications.
+2) Web Application
+An application that runs on the server side and creates a dynamic page is called a web application.
+ Currently, Servlet, JSP, Struts, Spring, Hibernate, JSF, etc. technologies are used for creating web applications in Java.
+3) Enterprise Application
+An application that is distributed in nature, such as banking applications, etc. is called an enterprise application. 
+It has advantages like high-level security, load balancing, and clustering. In Java, EJB is used for creating enterprise applications.
+4) Mobile Application
+An application which is created for mobile devices is called a mobile application. Currently, Android and Java ME are used for creating mobile applications.
+Features of Java:
+The primary objective of Java programming
+language creation was to make it portable, simple and secure programming language. Apart from this, there are also some excellent features which play an important role in the popularity of this language. The features of Java are also known as Java buzzwords.
+A list of the most important features of the Java language is given below.
+Java Features-
+Simple
+Object-Oriented
+Portable
+Platform independent
+Secured
+Robust
+Architecture neutral
+Interpreted
+High Performance
+Multithreaded
+Distributed
+Dynamic
+
+Simple:
+Java is very easy to learn, and its syntax is simple, clean and easy to understand. According to Sun Microsystem, Java language is a simple programming language because
+Java syntax is based on C++ (so easier for programmers to learn it after C++).
+Java has removed many complicated and rarely-used features, for example, explicit pointers, operator overloading, etc.
+There is no need to remove unreferenced objects because there is an Automatic Garbage Collection in Java.
+Object-oriented:
+Java is an object-oriented
+programming language. Everything in Java is an object. Object-oriented means we organize our software as a combination of different types of objects that incorporate both data and behavior.
+Object-oriented programming (OOPs) is a methodology that simplifies software development and maintenance by providing some rules.
+Basic concepts of OOPs are:
+Object
+Class
+Inheritance
+Polymorphism
+Abstraction
+Encapsulation
+Platform Independent
+Java is platform independent
+Java is platform independent because it is different from other languages like C,c++
+ which are compiled into platform specific machines while Java is a write once, run anywhere language. A platform is the hardware or software environment in which a program runs.
+There are two types of platforms software-based and hardware-based. Java provides a software-based platform.
+The Java platform differs from most other platforms in the sense that it is a software-based platform that runs on top of other hardware-based platforms. It has two components:
+-->Runtime Environment
+-->API
+Secured:
+Java is best known for its security. With Java, we can develop virus-free systems. 
+No explicit pointer
+Java Programs run inside a virtual machine sandbox
+how Java is secured
+Classloader: Classloader in Java is a part of the Java Runtime Environment (JRE) which is used to load Java classes into the Java Virtual Machine dynamically. It adds security by separating the package for the classes of the local file system from those that are imported from network sources.
+Bytecode Verifier: It checks the code fragments for illegal code that can violate access rights to objects.
+Security Manager: It determines what resources a class can access such as reading and writing to the local disk.
+Robust:
+It uses strong memory management.
+There is a lack of pointers that avoids security problems.
+Java provides automatic garbage collection which runs on the Java Virtual Machine to get rid of objects which are not being used by a Java application anymore.
+There are exception handling and the type checking mechanism in Java. All these points make Java robust.
+Architecture-neutral
+Java is architecture neutral because there are no implementation dependent features, for example, the size of primitive types is fixed.
+In C programming, int data type occupies 2 bytes of memory for 32-bit architecture and 4 bytes of memory for 64-bit architecture. However, it occupies 4 bytes of memory for both 32 and 64-bit architectures in Java.
+Portable:
+Java is portable because it facilitates you to carry the Java bytecode to any platform. It doesn't require any implementation.
+High-performance:
+Java is faster than other traditional interpreted programming languages because Java bytecode is "close" to native code. It is still a little bit slower than a compiled language (e.g., C++). Java is an interpreted language that is why it is slower than compiled languages, e.g., C, C++, etc.
+Multi-threaded:
+A thread is like a separate program, executing concurrently. We can write Java programs that deal with many tasks at once by defining multiple threads. The main advantage of multi-threading is that it doesn't occupy memory for each thread. It shares a common memory area. Threads are important for multi-media, Web applications, etc.
+Dynamic:
+Java is a dynamic language. It supports the dynamic loading of classes. It means classes are loaded on demand. It also supports functions from its native languages,C and C++.
+b)Explain The Architecture of JVM? 
+JVM Architecture:
+JVM is an abstract machine that provides the environment in which Java bytecode is executed. The falling figure represents the architecture of the JVM.
+
+jvm arci.png
+
+ClassLoader: 
+ClassLoader is a subsystem used to load class files. ClassLoader first loads the Java code whenever we run it.
+Class Method Area: 
+In the memory, there is an area where the class data is stored during the code's execution. Class method area holds the information of static variables, static methods, static blocks, and instance methods.
+Heap: 
+The heap area is a part of the JVM memory and is created when the JVM starts up. Its size cannot be static because it increase or decrease during the application runs.
+Stack: 
+It is also referred to as thread stack. It is created for a single execution thread. The thread uses this area to store the elements like the partial result, local variable, data used for calling method and returns etc.
+Native Stack: 
+It contains the information of all the native methods used in our application.
+Execution Engine: It is the central part of the JVM. Its main task is to execute the byte code and execute the Java classes. The execution engine has three main components used for executing Java classes.
+Interpreter: 
+It converts the byte code into native code and executes. It sequentially executes the code. The interpreter interprets continuously and even the same method multiple times. This reduces the performance of the system, and to solve this, the JIT compiler is introduced.
+JIT Compiler: 
+JIT compiler is introduced to remove the drawback of the interpreter. It increases the speed of execution and improves performance.
+Garbage Collector:
+ The garbage collector is used to manage the memory, and it is a program written in Java. It works in two phases, i.e., Mark and Sweep. Mark is an area where the garbage collector identifies the used and unused chunks of memory. The Sweep removes the identified object from the Mark
+Java Native Interface
+Java Native Interface works as a mediator between Java method calls and native libraries.
+Java Runtime Environment
+It provides an environment in which Java programs are executed. JRE takes our Java code, integrates it with the required libraries, and then starts the JVM to execute it. To learn more about the Java Runtime Environment, click here.
+Java Development Kit
+It is a software development environment used in the development of Java applications and applets. Java Development Kit holds JRE, a compiler, an interpreter or loader, and several development tools in it. To learn more about the Java Development Kit, click here.
+These are three main components of Java Architecture. The execution of a program is done with all these three components.
+
+c)What is difference between JDK, JRE, JVM? 
+JVM:
+JVM (Java Virtual Machine) is an abstract machine. It is called a virtual machine because it doesn't physically exist. It is a specification that provides a runtime environment in which Java bytecode can be executed. It can also run those programs which are written in other languages and compiled to Java bytecode.
+JVMs are available for many hardware and software platforms. JVM, JRE, and JDK are platform dependent because the configuration of each OS is different from each other. However, Java is platform independent. There are three notions of the JVM: specification, implementation, and instance.
+Play Videox
+The JVM performs the following main tasks:
+Loads code
+Verifies code
+Executes code
+Provides runtime environment
+JDK:
+JDK is an acronym for Java Development Kit. The Java Development Kit (JDK) is a software development environment which is used to develop Java applications and applets. It physically exists. It contains JRE + development tools.
+JDK is an implementation of any one of the below given Java Platforms released by Oracle Corporation:
+Standard Edition Java Platform
+Enterprise Edition Java Platform
+Micro Edition Java Platform
+The JDK contains a private Java Virtual Machine (JVM) and a few other resources such as an interpreter/loader (java), a compiler (javac), an archiver (jar), a documentation generator (Javadoc), etc. to complete the development of a Java Application.JDK
+JRE:
+JRE is an acronym for Java Runtime Environment. It is also written as Java RTE. The Java Runtime Environment is a set of software tools which are used for developing Java applications.
+ It is used to provide the runtime environment. It is the implementation of JVM. It physically exists. It contains a set of libraries + other files that JVM uses at runtime.
+The implementation of JVM is also actively released by other companies besides Sun Micro Systems.
+
+
+
+
+Question 2:
+a)Explain OOPs Concepts with example programs for each concept? 
+OOPS CONCEPTS:
+OOPS(OBJECT ORINTED PROGRAMMING SYSTEM)Object-Oriented Programming is  that provides many concepts, such as inheritance, data binding, polymorphism
+Object means a real-world entity such as a pen, chair, table, computer, watch, etc. Object-Oriented Programming is a methodology or paradigm to design a program using classes and objects. 
+It simplifies software development and maintenance by providing some concepts:
+Object
+Class
+Inheritance
+Polymorphism
+Abstraction
+Encapsulation
+
+Object:
+An entity that has state and behavior is known as an object e.g., chair, bike, marker, pen, table, car, etc. It can be physical or logical (tangible and intangible). The example of an intangible object is the banking system.
+An object has three characteristics:
+State: represents the data (value) of an object.
+Behavior: represents the behavior (functionality) of an object such as deposit, withdraw, etc.
+Identity: An object identity is typically implemented via a unique ID. The value of the ID is not visible to the external user. However, it is used internally by the JVM to identify each object uniquely.
+Characteristics of Object in Java
+For Example, Pen is an object. Its name is Reynolds; color is white, known as its state. It is used to write, so writing is its behavior.
+An object is an instance of a class. A class is a template or blueprint from which objects are created. So, an object is the instance(result) of a class.
+example for object:
+We can also create multiple objects and store information in it through reference variable.
+
+class Student{  
+ int id;  
+ String name;  
+}  
+class TestStudent3{  
+ public static void main(String args[]){  
+  //Creating objects  
+  Student s1=new Student();  
+  Student s2=new Student();  
+  //Initializing objects  
+  s1.id=101;  
+  s1.name="Sonoo";  
+  s2.id=102;  
+  s2.name="Amit";  
+  //Printing data  
+  System.out.println(s1.id+" "+s1.name);  
+  System.out.println(s2.id+" "+s2.name);  
+ }  
+}  
+Class:
+A class is a group of objects which have common properties. It is a template or blueprint from which objects are created. It is a logical entity. It can't be physical.
+A class in Java can contain:
+Fields
+Methods
+Constructors
+Blocks
+Nested class and interface
+
+Syntax:
+class <class_name>{  
+    field;  
+    method;  
+}  
+example for class:
+//Defining a Student class.  
+class Student{  
+ //defining fields  
+ int id;//field or data member or instance variable  
+ String name;  
+ //creating main method inside the Student class  
+ public static void main(String args[]){  
+  //Creating an object or instance  
+  Student s1=new Student();//creating an object of Student  
+  //Printing values of the object  
+  System.out.println(s1.id);//accessing member through reference variable  
+  System.out.println(s1.name);  
+ }  
+}  
+Inheritance:
+Inheritance in Java is a mechanism in which one object acquires all the properties and behaviors of a parent object. It is an important part of OOPs (Object Oriented programming system).
+The idea behind inheritance in Java is that you can create new classes that are built upon existing classes. When you inherit from an existing class, you can reuse methods and fields of the parent class. Moreover, you can add new methods and fields in your current class also.
+Inheritance represents the IS-A relationship which is also known as a parent-child relationship.
+we use inheritance for code reusability
+Syntax:
+class Subclass-name extends Superclass-name  
+{  
+   //methods and fields  
+}  
+example:
+class Employee{  
+ float salary=40000;  
+}  
+class Programmer extends Employee{  
+ int bonus=10000;  
+ public static void main(String args[]){  
+   Programmer p=new Programmer();  
+   System.out.println("Programmer salary is:"+p.salary);  
+   System.out.println("Bonus of Programmer is:"+p.bonus);  
+}  
+}  
+there are 3 types of inheritances
+1.single
+2.multiple
+3.hirarical
+4.multilevel
+5.hybrid
+Single Inheritance 
+When a class inherits another class, it is known as a single inheritance. In the example given below, Dog class inherits the Animal class, so there is the single inheritance.
+example:
+class Animal{  
+void eat(){System.out.println("eating...");}  
+}  
+class Dog extends Animal{  
+void bark(){System.out.println("barking...");}  
+}  
+class TestInheritance{  
+public static void main(String args[]){  
+Dog d=new Dog();  
+d.bark();  
+d.eat();  
+}}  
+Multilevel Inheritance:
+When there is a chain of inheritance, it is known as multilevel inheritance. As you can see in the example given below, BabyDog class inherits the Dog class which again inherits the Animal class, so there is a multilevel inheritance.
+example:
+class Animal{  
+void eat(){System.out.println("eating...");}  
+}  
+class Dog extends Animal{  
+void bark(){System.out.println("barking...");}  
+}  
+class BabyDog extends Dog{  
+void weep(){System.out.println("weeping...");}  
+}  
+class TestInheritance2{  
+public static void main(String args[]){  
+BabyDog d=new BabyDog();  
+d.weep();  
+d.bark();  
+d.eat();  
+}}  
+Hierarchical Inheritance :
+When two or more classes inherits a single class, it is known as hierarchical inheritance. In the example given below, Dog and Cat classes inherits the Animal class, so there is hierarchical inheritance.
+example:
+class Animal{  
+void eat(){System.out.println("eating...");}  
+}  
+class Dog extends Animal{  
+void bark(){System.out.println("barking...");}  
+}  
+class Cat extends Animal{  
+void meow(){System.out.println("meowing...");}  
+}  
+class TestInheritance3{  
+public static void main(String args[]){  
+Cat c=new Cat();  
+c.meow();  
+c.eat();  
+//c.bark();//C.T.Error  
+}}  
+multiple inheritance:
+To reduce the complexity and simplify the language, multiple inheritance is not supported in java.
+example:
+class A{  
+void msg(){System.out.println("Hello");}  
+}  
+class B{  
+void msg(){System.out.println("Welcome");}  
+}  
+class C extends A,B{//suppose if it were  
+   
+ public static void main(String args[]){  
+   C obj=new C();  
+   obj.msg();//Now which msg() method would be invoked?  
+}  
+}  
+Polymorphism :
+Polymorphism in Java is a concept by which we can perform a single action in different ways.   
+The word "poly" means many and "morphs" means forms. So polymorphism means many forms.
+There are two types of polymorphism in Java: compile-time polymorphism and runtime polymorphism. We can perform polymorphism in java by method overloading and method overriding.
+If you overload a static method in Java, it is the example of compile time polymorphism. Here, we will focus on runtime polymorphism in java.
+Runtime Polymorphism :
+Runtime polymorphism or Dynamic Method Dispatch is a process in which a call to an overridden method is resolved at runtime rather than compile-time.
+In this process, an overridden method is called through the reference variable of a superclass. The determination of the method to be called is based on the object being referred to by the reference variable.
+Example of Java Runtime Polymorphism
+ we are creating two classes Bike and Splendor. Splendor class extends Bike class and overrides its run() method. We are calling the run method by the reference variable of Parent class. 
+class Bank{  
+float getRateOfInterest(){return 0;}  
+}  
+class SBI extends Bank{  
+float getRateOfInterest(){return 8.4f;}  
+}  
+class ICICI extends Bank{  
+float getRateOfInterest(){return 7.3f;}  
+}  
+class AXIS extends Bank{  
+float getRateOfInterest(){return 9.7f;}  
+}  
+class TestPolymorphism{  
+public static void main(String args[]){  
+Bank b;  
+b=new SBI();  
+System.out.println("SBI Rate of Interest: "+b.getRateOfInterest());  
+b=new ICICI();  
+System.out.println("ICICI Rate of Interest: "+b.getRateOfInterest());  
+b=new AXIS();  
+System.out.println("AXIS Rate of Interest: "+b.getRateOfInterest());  
+}  
+}  
+compiletime polymorphism:
+At compile time, Java knows which method to invoke by checking the method signatures.  So, this is called compile time polymorphism or static binding. 
+example:
+class DemoOverload{
+    public int add(int x, int y){  //method 1
+    return x+y;
+    }
+
+    public int add(int x, int y, int z){ //method 2
+    return x+y+z;
+    }
+
+    public int add(double x, int y){ //method 3
+    return (int)x+y;
+    }
+
+    public int add(int x, double y){ //method 4
+    return x+(int)y;
+    }
+}
+
+class Test{
+    public static void main(String[] args){
+    DemoOverload demo=new DemoOverload();
+    System.out.println(demo.add(2,3));      //method 1 called
+    System.out.println(demo.add(2,3,4));    //method 2 called
+    System.out.println(demo.add(2,3.4));    //method 4 called
+    System.out.println(demo.add(2.5,3));    //method 3 called
+    }
+}
+Abstraction:
+A class which is declared with the abstract keyword is known as an abstract class.Abstraction is a process of hiding the implementation details and showing only functionality to the user.
+Another way, it shows only essential things to the user and hides the internal details, for example, sending SMS where you type the text and send the message. You don't know the internal processing about the message delivery.
+Abstract class:
+A class which is declared as abstract is known as an abstract class. It can have abstract and non-abstract methods. It needs to be extended and its method implemented. It cannot be instantiated.
+Abstract method:
+A method which is declared as abstract and does not have implementation is known as an abstract method
+Example for Abstract class and method:
+abstract class Bike{  
+  abstract void run();  
+}  
+class Honda4 extends Bike{  
+void run(){System.out.println("running safely");}  
+public static void main(String args[]){  
+ Bike obj = new Honda4();  
+ obj.run();  
+}  
+}  
+Encapsulation:
+Binding (or wrapping) code and data together into a single unit are known as encapsulation. For example, a capsule, it is wrapped with different medicines.
+A java class is the example of encapsulation. Java bean is the fully encapsulated class because all the data members are private here.
+example:
+class Account{ 
+private int account_number;
+private int account_balance; 
+    // getter method
+	public int getBalance() {
+        return this.account_balance;
+    }
+    // setter method
+	public void setNumber(int num) {
+        this.account_number = num;
+    }
+}
+b)Explain Constructor, this, final, super keywords with example programs? 
+In Java, a constructor is a block of codes similar to the method. It is called when an instance of the class is created. At the time of calling constructor, memory for the object is allocated in the memory.
+It is a special type of method which is used to initialize the object.
+Every time an object is created using the new() keyword, at least one constructor is called.
+It calls a default constructor if there is no constructor available in the class. In such case, Java compiler provides a default constructor by default.
+there a 2 types of Constructors
+they are 
+1.Default constructor (no-arg constructor)
+2.Parameterized constructor
+Default constructor:
+A constructor is called "Default Constructor" when it doesn't have any parameter.
+Syntax:
+<class_name>(){}  
+Example:
+class Student3{  
+int id;  
+String name;  
+//method to display the value of id and name  
+void display(){System.out.println(id+" "+name);}  
+  
+public static void main(String args[]){  
+//creating objects  
+Student3 s1=new Student3();  
+Student3 s2=new Student3();  
+//displaying values of the object  
+s1.display();  
+s2.display();  
+}  
+}  
+Parameterized Constructor:
+A constructor which has a specific number of parameters is called a parameterized constructor.
+Example:
+class Student4{  
+    int id;  
+    String name;  
+    //creating a parameterized constructor  
+    Student4(int i,String n){  
+    id = i;  
+    name = n;  
+    }  
+    //method to display the values  
+    void display(){System.out.println(id+" "+name);}  
+   
+    public static void main(String args[]){  
+    //creating objects and passing values  
+    Student4 s1 = new Student4(111,"Karan");  
+    Student4 s2 = new Student4(222,"Aryan");  
+    //calling method to display the values of object  
+    s1.display();  
+    s2.display();  
+   }  
+}  
+This:
+this is a reference variable that refers to the current object.
+1) this: to refer current class instance variable
+The this keyword can be used to refer current class instance variable. If there is ambiguity between the instance variables and parameters, this keyword resolves the problem of ambiguity.
+example:
+class Student{  
+int rollno;  
+String name;  
+float fee;  
+Student(int rollno,String name,float fee){  
+this.rollno=rollno;  
+this.name=name;  
+this.fee=fee;  
+}  
+void display(){System.out.println(rollno+" "+name+" "+fee);}  
+}  
+  
+class TestThis2{  
+public static void main(String args[]){  
+Student s1=new Student(111,"ankit",5000f);  
+Student s2=new Student(112,"sumit",6000f);  
+s1.display();  
+s2.display();  
+}} 
+2) this: to invoke current class method
+You may invoke the method of the current class by using the this keyword. If you don't use the this keyword, compiler automatically adds this keyword while invoking the method. Let's see the example
+example:
+class A{  
+void m(){System.out.println("hello m");}  
+void n(){  
+System.out.println("hello n");  
+//m();//same as this.m()  
+this.m();  
+}  
+}  
+class TestThis4{  
+public static void main(String args[]){  
+A a=new A();  
+a.n();  
+}}  
+3) this() : to invoke current class constructor
+The this() constructor call can be used to invoke the current class constructor. It is used to reuse the constructor. In other words, it is used for constructor chaining.
+example calling parameter:
+class A{  
+A(){  
+this(5);  
+System.out.println("hello a");  
+}  
+A(int x){  
+System.out.println(x);  
+}  
+}  
+class TestThis6{  
+public static void main(String args[]){  
+A a=new A();  
+}}  
+Real usage of this() constructor call:
+The this() constructor call should be used to reuse the constructor from the constructor. It maintains the chain between the constructors i.e. it is used for constructor chaining. Let's see the example given below that displays the actual use of this keyword.
+example:
+class Student{  
+int rollno;  
+String name,course;  
+float fee;  
+Student(int rollno,String name,String course){  
+this.rollno=rollno;  
+this.name=name;  
+this.course=course;  
+}  
+Student(int rollno,String name,String course,float fee){  
+this(rollno,name,course);//reusing constructor  
+this.fee=fee;  
+}  
+void display(){System.out.println(rollno+" "+name+" "+course+" "+fee);}  
+}  
+class TestThis7{  
+public static void main(String args[]){  
+Student s1=new Student(111,"ankit","java");  
+Student s2=new Student(112,"sumit","java",6000f);  
+s1.display();  
+s2.display();  
+}}  
+final:
+The final keyword in java is used to restrict the user. The java final keyword can be used in many context. Final can be:
+variable
+method
+class
+The final keyword can be applied with the variables, a final variable that have no value it is called blank final variable or uninitialized final variable.
+It can be initialized in the constructor only. The blank final variable can be static also which will be initialized in the static block only. We will have detailed learning of these. Let's first learn the basics of final keyword
+example:
+class Bike9{  
+ final int speedlimit=90;//final variable  
+ void run(){  
+  speedlimit=400;  
+ }  
+ public static void main(String args[]){  
+ Bike9 obj=new  Bike9();  
+ obj.run();  
+ }  
+}
+
+Super:
+he super keyword in Java is a reference variable which is used to refer immediate parent class object.
+
+Whenever you create the instance of subclass, an instance of parent class is created implicitly which is referred by super reference variable.
+
+Usage of Java super Keyword
+super can be used to refer immediate parent class instance variable.
+super can be used to invoke immediate parent class method.
+super() can be used to invoke immediate parent class constructor.
+Example:
+1)super is used to refer immediate parent class instance variable.
+We can use super keyword to access the data member or field of parent class. It is used if parent class and child class have same fields.
+
+class Animal{  
+String color="white";  
+}  
+class Dog extends Animal{  
+String color="black";  
+void printColor(){  
+System.out.println(color);//prints color of Dog class  
+System.out.println(super.color);//prints color of Animal class  
+}  
+}  
+class TestSuper1{  
+public static void main(String args[]){  
+Dog d=new Dog();  
+d.printColor();  
+}}  
+2) super can be used to invoke parent class method
+The super keyword can also be used to invoke parent class method. It should be used if subclass contains the same method as parent class. In other words, it is used if method is overridden.
+example:
+class Animal{  
+void eat(){System.out.println("eating...");}  
+}  
+class Dog extends Animal{  
+void eat(){System.out.println("eating bread...");}  
+void bark(){System.out.println("barking...");}  
+void work(){  
+super.eat();  
+bark();  
+}  
+}  
+class TestSuper2{  
+public static void main(String args[]){  
+Dog d=new Dog();  
+d.work();  
+}}  
+3) super is used to invoke parent class constructor.
+The super keyword can also be used to invoke the parent class constructor. Let's see a simple example:
+
+class Animal{  
+Animal(){System.out.println("animal is created");}  
+}  
+class Dog extends Animal{  
+Dog(){  
+super();  
+System.out.println("dog is created");  
+}  
+}  
+class TestSuper3{  
+public static void main(String args[]){  
+Dog d=new Dog();  
+}}  
+c)Explain difference between Interface and Abstract class with example programs?
+Abstract class                                                                  Interface
+ Abstract class can have abstract and non-abstract methods.	                        Interface can have only abstract methods. Since Java 8, it can have default and static methods also.
+ Abstract class doesn't support multiple inheritance.	                            Interface supports multiple inheritance.
+ Abstract class can have final, non-final, static and non-static variables.	        Interface has only static and final variables.
+ Abstract class can provide the implementation of interface.	                    Interface can't provide the implementation of abstract class.
+ The abstract keyword is used to declare abstract class.                            The interface keyword is used to declare interface.
+ An abstract class can extend another Java class and implement multiple             An interface can extend another Java interface only.    
+ Java interfaces.
+                                                                                    
+Example for Abstract:                                                                 
+abstract class Language {                                                              
+      MammalInt m = new MammalInt();
+      m.eat();
+      m.travel();
+   }
+} 
+
+  // abstract method
+  abstract void method1();
+
+  // regular method
+  void method2() {
+    System.out.println("This is regular method");
+  }
+}
+Example for Interface:
+public class MammalInt implements Animal {
+public static void main(String args[]) {
+public void eat() {
+      System.out.println("Mammal eats");
+   }
+   public void travel() {
+      System.out.println("Mammal travels");
+   } 
+   public int noOfLegs() {
+      return 0;
+   }
+   public static void main(String args[]) {
+      MammalInt m = new MammalInt();
+      m.eat();
+      m.travel();
+   }
+} 
+  // abstract method
+  abstract void method1();
+
+  // regular method
+  void method2() {
+    System.out.println("This is regular method");
+  }
+}
+
+
+Question 3:
+a)Explain The concept of Exception and Error with architecture?  
+Exceptions and errors both are subclasses of Throwable class. The error indicates a problem that mainly occurs due to the lack of system resources and our application should not catch these types of problems. 
+Some of the examples of errors are system crash error and out of memory error. 
+Errors mostly occur at runtime that's they belong to an unchecked type. 
+Exceptions are the problems which can occur at runtime and compile time. It mainly occurs in the code written by the developers.  Exceptions are divided into two categories such as checked exceptions and unchecked exceptions. 
+
+ Error	                                                                   Exception
+1
+Classified as an unchecked type                           Classified as checked and unchecked  
+2
+It belongs to java.lang.error                             It belongs to java.lang.Exception 
+3
+It is irrecoverable                                       It is recoverable
+4 
+It can't be occur at compile time                          It can occur at run time compile time both 
+5
+Example
+OutOfMemoryError ,IOError                                   NullPointerException , SqlException 
+
+Example of Error:
+public class ErrorExample {
+   public static void main(String[] args){
+      recursiveMethod(10)
+   }
+   public static void recursiveMethod(int i){
+      while(i!=0){
+         i=i+1;
+         recursiveMethod(i);
+      }
+   }
+}
+
+Example of Exception:
+public class ExceptionExample {
+   public static void main(String[] args){
+      int x = 100;
+      int y = 0;
+      int z = x / y;
+   }
+}
+
+b)What is the concept of Exception handling? Provide  Examples? 
+Exception Handling
+The Exception Handling in Java is one of the powerful mechanism to handle the runtime errors so that the normal flow of the application can be maintained.
+In this tutorial, we will learn about Java exceptions, it's types, and the difference between checked and unchecked exceptions.
+Exception Handling is a mechanism to handle runtime errors such as ClassNotFoundException, IOException, SQLException, RemoteException, etc.
+Types of Java Exceptions
+There are mainly two types of exceptions: checked and unchecked. An error is considered as the unchecked exception. However, according to Oracle, there are three types of exceptions namely:
+Checked Exception
+Unchecked Exception
+Error
+1) Checked Exception
+The classes that directly inherit the Throwable class except RuntimeException and Error are known as checked exceptions. For example, IOException, SQLException, etc. Checked exceptions are checked at compile-time.
+
+2) Unchecked Exception
+The classes that inherit the RuntimeException are known as unchecked exceptions. For example, ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException, etc. Unchecked exceptions are not checked at compile-time, but they are checked at runtime.
+
+3) Error
+Error is irrecoverable. Some example of errors are OutOfMemoryError, VirtualMachineError, AssertionError etc.
+example:
+public class JavaExceptionExample{  
+  public static void main(String args[]){  
+   try{  
+      //code that may raise exception  
+      int data=100/0;  
+   }catch(ArithmeticException e){System.out.println(e);}  
+   //rest code of the program   
+   System.out.println("rest of the code...");  
+  }  
+excpection occurs in some ways those are
+Arithmeticexception:
+If we divide any number by zero, there occurs an ArithmeticException.
+int a=50/0;//ArithmeticException  
+NullPointerException:
+String s=null;  
+System.out.println(s.length());//NullPointerException 
+numberexception:
+If the formatting of any variable or number is mismatched, it may result into NumberFormatException. Suppose we have a string variable that has characters; converting this variable into digit will cause NumberFormatException.
+String s="abc";  
+int i=Integer.parseInt(s);//NumberFormatException   
+
+ArrayIndexOutOfBoundsException :
+When an array exceeds to it's size, the ArrayIndexOutOfBoundsException occurs. there may be other reasons to occur ArrayIndexOutOfBoundsException. Consider the following statements.
+
+int a[]=new int[5];  
+a[10]=50; //ArrayIndexOutOfBoundsException  
+
+
+c)Explain about throw and throws keywords with examples? 
+
+Throw Exception:
+In Java, exceptions allows us to write good quality codes where the errors are checked at the compile time instead of runtime and we can create custom exceptions making the code recovery and debugging easier.
+Throws Keyword:
+The Java throw keyword is used to throw an exception explicitly.
+
+We specify the exception object which is to be thrown. The Exception has some message with it that provides the error description. These exceptions may be related to user inputs, server, etc.
+
+We can throw either checked or unchecked exceptions in Java by throw keyword. It is mainly used to throw a custom exception. We will discuss custom exceptions later in this section.
+syntax:
+throw new exception_class("error message");  
+throw Example:
+public class TestThrow {  
+    //defining a method  
+    public static void checkNum(int num) {  
+        if (num < 1) {  
+            throw new ArithmeticException("\nNumber is negative, cannot calculate square");  
+        }  
+        else {  
+            System.out.println("Square of " + num + " is " + (num*num));  
+        }  
+    }  
+    //main method  
+    public static void main(String[] args) {  
+            TestThrow obj = new TestThrow();  
+            obj.checkNum(-3);  
+            System.out.println("Rest of the code..");  
+    }  
+}  
+
+Throws keyword:
+The Java throws keyword is used to declare an exception. It gives an information to the programmer that there may occur an exception. So, 
+it is better for the programmer to provide the exception handling code so that the normal flow of the program can be maintained.
+Exception Handling is mainly used to handle the checked exceptions. If there occurs any unchecked exception such as NullPointerException, it is programmers' fault that he is not checking the code before it being used.
+Syntax of Java throws
+return_type method_name() throws exception_class_name{  
+//method code  
+}  
+ example of throws:
+ public class TestThrows {  
+    //defining a method  
+    public static int divideNum(int m, int n) throws ArithmeticException {  
+        int div = m / n;  
+        return div;  
+    }  
+    //main method  
+    public static void main(String[] args) {  
+        TestThrows obj = new TestThrows();  
+        try {  
+            System.out.println(obj.divideNum(45, 0));  
+        }  
+        catch (ArithmeticException e){  
+            System.out.println("\nNumber cannot be divided by 0");  
+        }  
+          
+        System.out.println("Rest of the code..");  
+    }  
+}  
+
+
+
+Question 4:
+a)Explain the concept of multi-Threading? Provide Examples?
+Multithreading is the ability of a program or an operating system to enable more than one user at a time without requiring multiple copies of the program running on the computer. Multithreading can also handle multiple requests from the same user.
+Each user request for a program or system service is tracked as a thread with a separate identity. As programs work on behalf of the initial thread request and are interrupted by other requests, the work status of the initial request is tracked until the work is completed. In this context, a user can also be another program.
+Fast central processing unit (CPU) speed and large memory capacities are needed for multithreading. The single processor executes pieces, or threads, of various programs so fast, it appears the computer is handling multiple requests simultaneously.
+Example:
+
+class ThreadCount extends Thread{
+ThreadCount(){
+super("Overriding Thread Class");
+System.out.println("New thread created" + this);
+start();
+}
+public void run(){ //Run Method
+    try{
+        for (int i=0 ;i<10;i++){
+System.out.println("New thread created" + this);
+Thread.sleep(1500);
+}
+    }
+    catch(InterruptedException e){
+System.out.println("Currently executing thread is interrupted");
+}
+System.out.println("Currently executing thread run is terminated" );}
+}
+public class MultiThreading{
+public static void main(String args[]){
+ThreadCount C = new ThreadCount();
+try{
+while(C.isAlive()){
+System.out.println("Main Method Thread will be alive, until it's Child Thread stays alive");
+Thread.sleep(2500); //Sleep method
+}
+}
+catch(InterruptedException e){
+System.out.println("Main Method thread is interrupted");
+}
+System.out.println("Main Method's thread run is terminated" );
+}
+}
+
+b)What is Thread? How many types we can define a thread? Provide Examples for each? 
+thread:
+A thread is the smallest segment of an entire process. A thread is an independent, virtual and sequential control flow within a process. In process execution, it involves a collection of threads, and each thread shares the same memory. 
+Each thread performs the job independently of another thread. Sometimes, the processes might be interdependent for an intermediate result to finish the process.
+In the next part of the Multithreading in Java tutorial, you will learn about the Lifecycle of a Thread.
+The lifecycle of each thread in Java has five different stages. You will look into each one of those stages in detail. The Stages of the Lifecycle are mentioned below.
+New
+The first stage is "New". This stage is where it initiates the thread. After that, every thread remains in the new state until the thread gets assigned to a new task.
+Runnable
+The next stage is the runnable stage. Here, a thread gets assigned to the task and sets itself for running the task. 
+Running
+The third stage is the execution stage. Here, the thread gets triggered as control enters the thread, and the thread performs a task and continues the execution until it finishes the job. 
+Waiting
+At times, there is a possibility that one process as a whole might depend on another. During such an encounter, the thread might halt for an intermediate result because of its dependency on a different process. This stage is called the Waiting Stage.
+Dead
+The final stage of the process execution with Multithreading in Java is thread termination. After it terminates the process, the JVM automatically declares the thread dead and terminates the thread. This stage is known as the dead thread stage.
+Now that you learned about the thread and its life cycle, move ahead and understand multithreading in Java.
+tread example:
+class NewThread implements Runnable {  
+    String name;  
+    Thread thread;  
+    NewThread (String name){  
+        this.name = name;   
+        thread = new Thread(this, name);  
+        System.out.println( "A New thread: " + thread+ "is created\n" );  
+        thread.start();  
+    }  
+    public void run() {  
+    try {  
+        for(int j = 5; j > 0; j--) {  
+            System.out.println(name + ": " + j);  
+            Thread.sleep(1000);  
+        }  
+    }catch (InterruptedException e) {  
+        System.out.println(name + " thread Interrupted");  
+    }  
+     System.out.println(name + " thread exiting.");  
+    }  
+}  
+class ThreadExample2 {    
+    public static void main(String args[]) {  
+        new NewThread("1st");  
+        new NewThread("2nd");  
+        new NewThread("3rd");  
+        try {  
+            Thread.sleep(8000);  
+        } catch (InterruptedException excetion) {  
+            System.out.println("Inturruption occurs in Main Thread");  
+        }  
+        System.out.println("We are exiting from Main Thread");  
+    }  
+}  
+
+c)What is Synchronization? Provide Examples? 
+As Java is a multi-threaded language, it supports a very important concept of Synchronization.
+The process of allowing only a single thread to access the shared data or resource at a particular point of time is known as Synchronization.
+This helps us to protect the data from the access by multiple threads. Java provides the mechanism of synchronization using the synchronized blocks.
+We declare all synchronized blocks in Java are using a synchronized keyword. A block that is declared with a synchronized keyword ensures that only a single thread executes at a particular time.
+No other thread can enter into that synchronized block until the thread inside that block completes its execution and exits the block.
+syntax:
+synchronized( lockObject )
+{
+// synchronized statements
+}
+There are two types of synchronization in Java. They are:
+1. Process Synchronization
+Process Synchronization is the term used to define Sharing the resources between two or more processes and meanwhile ensuring the inconsistency of data.
+2. Thread Synchronization
+The concurrent execution of the critical resource by two or more Threads is termed as Thread Synchronization. Thread is the subroutine that can execute independently within a single process.
+Example:
+class Table{  
+void printTable(int n){//method not synchronized  
+   for(int i=1;i<=5;i++){  
+     System.out.println(n*i);  
+     try{  
+      Thread.sleep(400);  
+     }catch(Exception e){System.out.println(e);}  
+   }  
+  
+ }  
+}  
+  
+class MyThread1 extends Thread{  
+Table t;  
+MyThread1(Table t){  
+this.t=t;  
+}  
+public void run(){  
+t.printTable(5);  
+}  
+  
+}  
+class MyThread2 extends Thread{  
+Table t;  
+MyThread2(Table t){  
+this.t=t;  
+}  
+public void run(){  
+t.printTable(100);  
+}  
+}  
+  
+class TestSynchronization1{  
+public static void main(String args[]){  
+Table obj = new Table();//only one object  
+MyThread1 t1=new MyThread1(obj);  
+MyThread2 t2=new MyThread2(obj);  
+t1.start();  
+t2.start();  
+}  
+}  
+d)What is Difference between Synchronization and synchronized block? Provide Examples?  
+Synchronization 
+Syncronization is avoid data inconsistancy.
+the performance is low.
+the waiting time is high.
+
+Synchronization block:
+whenever useing synchronization block multiple thread trying to enter in to a synchronization block.there will be a lock is required.
+the performance is high.
+the waiting time is low.
+syncronized example:
+public void increment(int value) {
+  synchronized(this) {
+    this.count += value;
+  }
+}
+syncronized block example:
+public class MyClass {
+  public static void print(String message) {
+    synchronized(MyClass.class) {
+      log.writeln(message);
+    }
+  }
+}

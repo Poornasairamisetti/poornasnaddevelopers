@@ -1,0 +1,243 @@
+Question 1
+1.What is a callback function and callback hell in javascript?
+CALLBACK FUNCTION
+A callback  function is just a regular function, which is called after another function has finished executing.The callback functions are nested inside each other since we 
+depend on the data from the previous function.
+example:
+console.log("Before...");
+setTimeout(function() {
+    console.log("It took 500ms to get here!");
+}, 500);
+console.log("After...");
+CALLBACK HELL
+In short, callback hell means that you have multiple functions that are asynchronous. Those functions depend on each other, which might, in turn, get quite messy with a lot
+of callback function that is nested in multiple layers. This will result in chaos, and you will end up with code which is hard to read and maintain Footer
+
+Question 2
+2.Explain how to iterate an object in javascript?
+There are three ways we can iterate over an object in JavaScript:
+1.Using for...in statement
+2.Using Object.entries() method and for...of statement
+3.Using Object.keys() method and for...of statement.
+
+1.Iterate over object using for…in statement
+To iterate over an object type variable in JavaScript, you need to use the for..in statement.
+The for...in statement allows you to iterate over the object property keys, so we can log both 
+the property keys and values.
+Example:
+const obj = {
+    name: "Samyuktha",
+    age: 22,
+    job: "Web developer",
+  };
+  
+  for (const key in obj) {
+    console.log(`${key}: ${obj[key]}`);
+  }
+
+2.Iterate over object using Object.entries() method
+The Object.entries() method is a built-in method of the JavaScript Object class that transforms an
+object value into a two-dimensional array.
+Example:
+const obj = {
+    name: "Samyuktha",
+    age: 22,
+    job: "Web developer",
+  };
+  
+  const objArray = Object.entries(obj);
+  console.log(objArray);
+  
+3.Iterate over object using Object.keys() method
+Aside from Object.entries(), you can also use the Object.keys() method, which returns your object property
+keys as an array.You can then use the for...of statement to iterate over the array and log each object property.
+Example:
+const obj = {
+    name: "Samyuktha",
+    age: 22,
+    job: "Web developer",
+  };
+  
+  const keys = Object.keys(obj);
+  
+  for (const key of keys) {
+    console.log(`${key}: ${obj[key]}`);
+  }
+
+  Question 3
+Explain about promises and create promise with simple example?
+PROMISE OBJECT
+In java script promise object is an eventual completion of an asynchronous operation and its resulthing value.
+it supports the two properties,when a promise object is pending it results undefined and when it is fullfilled it result is the value .
+Example for promiseobject:
+
+    function myDisplayer(some){
+        document.getElementById("demo").innerHTML = some;
+    }
+let myPromise = new promise(function(myResolve,myReject)){
+    let x=0;
+    if(x==0){
+        myResolve("print ok");
+    }
+    else{
+        myReject("print error");
+    }
+});
+mypromise.then(
+    function(value)
+    {myDisplayer(value);}
+    function(error)
+    {myDisplayer(error);}
+);
+
+Question 4
+IMPLICIT CONVERSION
+In javascript conversion will happen without the developer noticing. conversion is the value type to the expected type under the hood. when we want to make a value type to special type 
+this conversion will happen in javascript.
+Example:
+// Implicit conversion to string
+'25' + 15; // '2515'
+
+// Implicit conversions to a number
+23 * '2';   // 46
+23 - true;  // 22  // true is converted into 1
+true - null; // 1
+false + undefined;  // NaN  // undefined into NaN
+
+// Implicit conversions in statements
+const arr = [];
+if(arr) { console.log('Hello World') };  // Hello World 
+// Here the empty arr is converted into a Boolean true
+
+Question 5
+Explain passed by value and passed by reference in javascript?
+PASSBY VALUE: 
+passby value function will called by directly passing the value to the variable as an argument.if any changes are made inside the function it will not effect the original value.if it is 
+passed as an arrgument it create its own copy so it will not effect the original value.
+Example:
+function Passbyvalue(a, b) {
+    let tmp;
+    tmp = b;
+    b = a;
+    a = tmp;
+    console.log(`Inside Pass by value 
+        function -> a = ${a} b = ${b}`);
+}
+  
+let a = 1;
+let b = 2;
+console.log(`Before calling Pass by value 
+        Function -> a = ${a} b = ${b}`);
+  
+Passbyvalue(a, b);
+  
+console.log(`After calling Pass by value 
+       Function -> a =${a} b = ${b}`);
+
+PASSBY REFERENCE:
+passby reference is directly call by passing the address of the variable as an argument.it does not create its own copy because it will refer to the orginal value so changes are made 
+inside the function affect the original value.
+Example:
+function PassbyReference(obj) {
+    let tmp = obj.a;
+    obj.a = obj.b;
+    obj.b = tmp;
+  
+    console.log(`Inside Pass By Reference 
+        Function -> a = ${obj.a} b = ${obj.b}`);
+}
+  
+let obj = {
+    a: 10,
+    b: 20
+  
+}
+console.log(`Before calling Pass By Reference 
+    Function -> a = ${obj.a} b = ${obj.b}`);
+  
+PassbyReference(obj)
+  
+console.log(`After calling Pass By Reference 
+    Function -> a = ${obj.a} b = ${obj.b}`);
+
+Question6
+6.What is difference between flex and css grid explain  with example?
+Flexbox is a one-dimensional layout model that was designed to provide greater control over alignment and space distribution between items within a container. Being one-dimensional,
+it only deals with layout in a single direction - columns or rows - at a time. This works well
+for smaller layouts, such as components.
+
+CSS Grid is a two-dimensional layout system that is aimed towards control of larger layouts,
+such as whole page layouts. Similar to tables, it allows for items to be aligned in columns 
+and rows. However, CSS Grid is easier to control and provides more layout options than old 
+table-based layouts.
+
+Question7
+7.Explain about currying with example? 
+CURRING IN JAVASCRIPT
+curring in javascript means evaluating functions with the multiple arguments and decomposing them into the sequence of functions with single argument.simply it is a check method to
+check everthing before proceeding. when we want the same call with some the same parameters then it helps in passing the same variable again and again.it makes the code easier.
+Example:
+function sum(a, b) {
+    return a + b;
+  }
+  const curriedSum = curry(sum)
+  console.log(curriedSum(1)(2)) 
+
+  Question 8
+8.Explain about object prototype and add reverse method to String class to reverse a given string?
+OBJECT PROTOTYPE
+ Prototype is an object,in javascript  it has a build-in property which is prototype.as it is object it has own prototype .when we try to access a function object javascript will look at its prototype property to see it is there .if it is not present then it goes to the prototype chain
+ and try to find.
+
+ for example:
+ const string = prompt('Enter a string: ');
+
+  const result = reverseString(string);
+ console.log(result);
+ the output will be reverse of what the user enters in the prompt box.
+
+  object prototype:
+ 
+   function Student() {
+   this.name = 'girish';
+   this.gender = 'Male';
+ }
+
+  Student.prototype.age = 15;
+
+   var studObj1 = new Student();
+   alert(studObj1.age); 
+   var studObj2 = new Student();
+   alert(studObj2.age); 
+
+    Age="15" for student object2.
+
+Question 9
+    DIFFERENCE BETWEEN JAVASCRIPT AND TYPESCRIPT
+JAVASCRIPT                       TYPESCRIPT
+1.javascript has number,string  1. typescript has number,string are interface
+are objects  
+2.It doesn't support modularity. 2. it supports modularity.
+3.It gets errors at runtime.      3.it shows the errors during the development time.
+4.it does not supports generics  4.it supports generics
+
+Question 10
+How to access data from one script block to another script block in javascript?
+ We use export and import statements to access the data from one script to another 
+ export statment can be used , for accessing the data from another script block i.e methods 
+ classes or any variables too, by calling its name
+ Example:
+    export{}
+    import statment can be used for importing the entire file by using its path location.
+ Example:
+    import(../components/src/hello.js)
+    this is how we import the blocks directly in to other script block.
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitH

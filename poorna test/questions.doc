@@ -1,0 +1,101 @@
+question 1--
+call back function and call back hell:
+call back fuction is used to call back the fuction and it passes the argument to the function to call another function,
+syntax-
+function firstname(){
+    mydisplayer("hi")
+}
+function secondname(){
+    mydisplayer("hello")
+}
+myfirstname();
+mysecondname();
+quetion 2--
+In java we can use map and filter to iterate an Object
+syntax-
+Object.name(items).map(item) =>{
+    console.log(item)
+}
+quetion 3--
+promise nothig but it produces a code and it consume the code
+syntax--
+//produsing code
+let my Promise=new Promise(function(myresolve,myreject){
+    myresolve();
+    myreject();
+});
+//consuming code
+myPromise.then(
+    function(value)
+        {/*code if correct*/},
+        function(error){/*code if some error*/}
+    
+)
+quetion 4--
+implicit type converion is nothig but it implicit the occurs autometicaly and it conversion the value from one data type to another
+example string to number 
+if(1){
+    console.log("hi to all")
+}
+this will print in the console
+quetion 5--
+passed by value and passed by Reference
+paased by value-- function is called directly passing the value of the variable as an argument so when we change the any changes in the variable it does not effect the original value
+syntax--
+function Passedbyvalue(a,b){
+    let emp;
+    emp =e;
+    e=a;
+    a=empconsole.log("inside pass by value function=>a=$[a] e=$[e]");
+}
+passed by referemce--In this pass by reference function is called by directly passes the reference address of the variable as an argument so if we change the original value too
+syntax--
+function passbyReference(obj){
+  let emp =obj.a;
+  obj.a = obj.b;
+  obj.b = temp;
+  console.log("inside pass by reference function=>a=$[onj.a] b=$[obj.b]");
+
+}
+passbyReference(obj)
+console.log("calling pass by reference function =>a=$[onj.a] b=$[obj.b]")
+quetion 6--
+In css the flexbox was designed for layout in one dimention either a row or a column
+gird was disigned for two dimentional layout rows and columns at the same Time.
+
+
+
+
+quetion 7--
+currying maens evaluating function with multiple arguments and decomposing them into a sequence of function with a single argument.
+syntax--
+var catanimal=function(a){
+    return function(b){
+        var result ="hii".concat(a).concat("and").concat(b);
+        return result;
+    };
+};
+var catreact=catanimal("react");
+catreaction("elephant");
+quetion 8--
+A JavaScript object is a collection of unordered properties Properties can usually be changed added and deleted but some are read only.
+person.firstname + " is " + person.age + " years old.";
+
+reversing a string
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.reverse();
+</script>
+question 9--
+java script is lossly time and is can not acces the type of the data type
+where typescript is tpye is gives the type of the data type
+Typescript can be compiled to run on any browser,device or os.Typescript is not specific to any single environment.Typescript supports js libraries.
+Javascript can be converted to typescript by changing .js to ts
+ 
+quetion 10--
+in java script when we combaine the two statements then we can acess the data
+declareand by the data in a .js file so that it is available to any 
+sript block 
+
+
+

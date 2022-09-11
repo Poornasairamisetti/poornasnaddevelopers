@@ -1,0 +1,91 @@
+Question 5:
+a)Java program to display Fibonacci series? 
+class Main {
+  public static void main(String[] args) {
+
+    int n = 10, n1= 0, n2 = 1;
+    System.out.println("Fibonacci Series till " + n + " terms:");
+
+    for (int i = 1; i <= n; ++i) {
+      System.out.print(firstTerm + ", ");
+
+      // compute the next term
+      int nextTerm = n1+ n2;
+      n1 = n2;
+      n2= nextTerm;
+    }
+  }
+}
+
+b)Java program to Create Pyramids and Patterns? 
+public class Main {
+
+  public static void main(String[] args) {
+    int rows = 10, k = 0;
+
+    for (int i = 1; i <= rows; ++i, k = 0) {
+      for (int space = 1; space <= rows - i; ++space) {
+        System.out.print("  ");
+      }
+
+      while (k != 2 * i - 1) {
+        System.out.print("* ");
+        ++k;
+      }
+
+      System.out.println();
+    }
+  }
+}
+
+
+
+c)Java Program to Reverse a String 
+class Reverse{
+    public static void main(String[] args)
+    {
+     String str="snad developers";
+     String empty="";
+     char ch;
+     for(int i=0;i<str.length();i++)
+     {
+       ch=str.charAt(i);
+       empty=ch+empty;
+     }
+     System.out.println(empty);
+    } 
+}
+
+d)Java Program to Check Leap Year? 
+public class LeapYear {
+   public static void main(String[] args){
+      int year;
+      System.out.println("Enter an Year :: ");
+      Scanner sc = new Scanner(System.in);
+      year = sc.nextInt();
+
+      if (((year % 4 == 0) && (year % 100!= 0)) || (year%400 == 0))
+         System.out.println("Specified year is a leap year");
+      else
+         System.out.println("Specified year is not a leap year");
+   }
+}
+
+e)Java Program to generate Multiplication Table? 
+import java.util.Scanner;  
+public class TableExample  
+{  
+public static void main(String args[])   
+{  
+Scanner sc = new Scanner(System.in);  
+System.out.print("Enter number: ");       
+//reading a number whose table is to be print  
+int num=sc.nextInt();  
+//loop start execution form and execute until the condition i<=10 becomes false  
+for(int i=1; i <= 10; i++)  
+{  
+//prints table of the entered number      
+System.out.println(num+" * "+i+" = "+num*i);  
+}  
+}  
+}

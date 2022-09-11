@@ -1,0 +1,411 @@
+Question 1:
+closures with example-
+A closure can be defined as a JavaScript feature in which the inner function has access to the outer function variable. In JavaScript, every time a closure is created with the creation of a function.
+
+The closure has three scope chains :
+1.Access to its own scope.
+2.Access to the variables of the outer function.
+3.Access to the global variables.
+example:
+<script>  
+function fun()  
+{  
+var a = 4; // 'a' is the local variable, created by the fun()  
+function innerfun() // the innerfun() is the inner function, or a closure  
+{  
+return a;  
+}  
+return innerfun;  
+}  
+var output = fun();  
+document.write(output());  
+document.write(" ");  
+document.write(output());  
+</script>  
+
+Question 2:
+Explain about shallow copy and deep copy
+Shallow copy:
+When we do a copy of some entity to create two or more than two entities such that changes in one entity are reflected in the other entities as well, 
+then we can say we have done a shallow copy. In shallow copy, new memory allocation never happens for the other entities, 
+and the only reference is copied to the other entities.
+Example:
+class ABC  
+{  
+// instance variable of the class ABC  
+int x = 30;  
+}  
+public class ShallowCopyExample   
+{     
+// main method  
+public static void main(String argvs[])   
+{  
+// creating an object of the class ABC  
+ABC obj1 = new ABC();  
+  
+// it will copy the reference, not value  
+ABC obj2 = obj1;  
+  
+// updating the value to 6   
+// using the reference variable obj2  
+obj2.x = 6;  
+  
+// printing the value of x using reference variable obj1   
+System.out.println("The value of x is: " + obj1.x);  
+}  
+}   
+DeepCopy:
+When we do a copy of some entity to create two or more than two entities such that changes in one entity are not reflected in the other entities,
+ then we can say we have done a deep copy. In the deep copy, a new memory allocation happens for the other entities, and reference is not copied to the other entities.
+  Each entity has its own independent reference. The following example demonstrates the same.
+  Example:
+  class ABC  
+{  
+// instance variable of the class ABC  
+int x = 30;  
+}  
+public class DeepCopyExample   
+{     
+// main method  
+public static void main(String argvs[])   
+{  
+// creating an object of the class ABC  
+ABC obj1 = new ABC();  
+  
+// it will copy the reference, not value  
+ABC obj2 = new ABC();  
+  
+// updating the value to 6   
+// using the reference variable obj2  
+obj2.x = 6;  
+  
+// printing the value of x using reference variable obj1   
+System.out.println("The value of x is: " + obj1.x);  
+}  
+}  
+Question 3:
+destructuring of an object:
+It is similar to array destructuring except that instead of values being pulled out of an array, the properties (or keys) and their corresponding values can be pulled out from an object.
+When destructuring the objects, we use keys as the name of the variable. The variable name must match the property (or keys) name of the object. If it does not match, 
+then it receives an undefined value. This is how JavaScript knows which property of the object we want to assign.
+In object destructuring, the values are extracted by the keys instead of position (or index).
+Example:const student = {name: 'Arun', position: 'First', rollno: '24'};  
+const {name, position, rollno} = student;  
+console.log(name); // Arun  
+console.log(position); // First  
+console.log(rollno); // 24  
+-->Like array destructuring, a default value can be assigned to the variable if the value unpacked from the object is undefined. 
+ex:
+const {x = 100, y = 200} = {x: 500};   
+console.log(x); // 500  
+console.log(y); // 200  
+
+Question 4:
+Advantages of Arrow functions:
+Arrow function:
+which provides you a more accurate way to write the functions in JavaScript
+They allow us to write smaller function syntax. Arrow functions make your code more readable and structured.They don't return any value and can declare without the function keyword. Arrow functions cannot be used as the constructors.
+ The context within the arrow functions is lexically or statically defined. 
+ syntax:
+ const functionName = (arg1, arg2, ?..) => {  
+    //body of the function  
+}  
+ Advantages:
+ 1.It reduces the code size: When we use the syntax of arrow function, the size of the code gets reduced. We can write less amount of code by using the arrow function.
+2. Return statement and Functional braces are optional for single line functions:In ES5, we need to define the return statement in the functions, but in ES6, we do not require to define the return statement for single-line functions. Functional braces are also optional for the single-line functions.
+ example:
+function show(value){  
+return value/2;  
+}  
+exam:
+var show = value => value/2;  
+console.log(show(100));  
+If you are not applying curly braces on the single statement, then you do not require to use return, but if you are using curly braces even on the single statement, then you must have to use the return keyword.
+Exam:
+Without Return Keyword:
+var show = value => {  
+    value/2;  
+}  
+console.log(show(50));  
+
+With Return Keyword:
+var show = value => {  
+   return value/2;  
+}  
+console.log(show(50));  
+3. Lexically bind the context: Arrow function binds the context lexically or statically. The handling of this is different in arrow functions as compared to regular functions. In the arrow function, there is not any binding of this. 
+In regular functions, this keyword is used to represent the objects that called the function, which could either be a window, a button, or a document or anything.
+
+But with arrow functions, this keyword always represents the object that defines the arrow function.
+example:
+Consider a class having an array of numbers, and if the number is less than 30, then we will push them into the child queue.
+this.num.forEach(function(num) {   
+    if (num < 30)   
+        this.child.push(num);   
+}.bind(this));  
+In ES6, it can be done by using the arrow function
+
+this.num.forEach((num) => {   
+    if (num < 30)   
+        this.child.push(num);   
+});  
+So, by using the arrow function, we do not require to bind it implicitly because it performs automatically by the arrow function.
+Question 5:
+Higher order function:
+As iOS developers, we must aware of Higher-order functions. Using higher-order functions in our code enhances the execution speed of our code and speed up our development skills.
+A higher-order function can be defined as a function that accepts one or more functions as arguments and returns a function as a result.
+In this article, we will discuss some swift
+higher-order functions, including forEach, map, CompactMap, flatMap, filter, reduce, sort, and sorted.
+forEach function:
+The forEach iterates through all elements of an array and doesn't return anything to the compiler
+exm:
+let marks = [10,20,21,65,32,21]  
+//1st  
+marks.forEach{(marks) in  
+    debugPrint(marks, terminator:" ")  
+}  
+debugPrint()  
+  
+  
+//2nd  
+marks.forEach{ debugPrint($0, terminator:" ")}  
+map:
+The map is used to iterate through all array elements and returns a modified array after performing some operations on each element of it. Consider the following example in which we have an array of names that include first and last names.
+ We use the map function to split the last name from each name and assign it back to names.
+ exam:
+ var names = ["John K", "David Garner", "Mike Smith", "Will lee"]  
+let firstNames = names.map{(name) -> String in  
+ name.split(separator: " ").first!.description  
+}   
+debugPrint(firstNames)  
+let newNames = names.map{$0.split(separator: " ").first!.description}  
+debugPrint(newNames)  
+compactMap:
+A compactMap iterates the array and returns an updated array that includes only the elements that satisfy the condition written inside the compactMap body. 
+The element that doesn't satisfy the condition is excluded from the modified array.
+exam:
+var marks = ["ten ", "10", "20", "thrty one"]  
+intMarks = marks.compactMap{(marks) in  
+    Int(marks)?.description  
+}  
+debugPrint(intMarks)   
+newMarks = marks.compactMap{Int($0)?.description}   
+debugPrint(newMarks)  
+flatMap:
+The flatMap function is used to convert a 2-D array to a 1-D array. 
+exam:
+var arrayOfNames = [["John", "Rockey", "David"],["Smith","Roy","Max"]]  
+let names = arrayOfNames.flatMap{name in name}  
+debugPrint(names)   
+let arrnames = arrayOfNames.flatMap{$0} 
+debugPrint(arrnames)  
+filter:
+As the name suggests, the filter () is used to filter the array based on some particular condition. It iterates through an array and returns a modified array where elements satisfy the condition written inside the filter body.
+exam:
+var numbers = [1,2,3,4,5,6,7,8,9,10,11,12]  
+let evenNumbers = numbers.filter{(num) in  
+    num%2 == 0  
+}  
+debugPrint(evenNumbers)  
+let oddNumbers = numbers.filter{$0%3 == 0}  
+debugPrint(oddNumbers)  
+reduce:
+The reduce () is used to iterate through all array elements and returns the object with a combined value of initial result and current result.
+var numbers = [1,2,3,4,5,6,7,8,9]  
+  
+let sum = numbers.reduce(0) { (result, num)  in  
+    result + num  
+}  
+debugPrint(sum)  
+  
+let s = numbers.reduce(0){$0 + $1}  
+debugPrint(s)  
+Sort(by: ) and sorted(by: ):-
+The sort (by:) and sorted (by:) functions are used to sort an array of elements based on some particular condition. However, the sorted (by:) returns a new array that contains the sorted elements. Consider the following example.
+exam:
+var numbers = [10,12,3,14,52,61,17,82,19]  
+var nums = numbers   
+//sorted function  
+let sortedNumbers = numbers.sorted { (a, b) -> Bool in  
+    a<b  
+}  
+debugPrint(sortedNumbers)  
+//sort function  
+numbers.sort{(a,b) -> Bool in  
+    a<b  
+}  
+debugPrint(numbers)  
+//shorthand syntax of sorted  
+let sortedNums = numbers.sorted{$0 < $1}  
+debugPrint(sortedNums) 
+//shorthand syntax of sort  
+nums.sort{$0 < $1}  
+debugPrint(nums)   
+
+Question 6:
+event looping:
+The event loop is the secret behind JavaScript’s asynchronous programming. JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading. Let’s take a look at what happens on the back-end.
+
+The call stack is responsible for keeping track of all the operations in line to be executed. Whenever a function is finished, it is popped from the stack.
+
+The event queue is responsible for sending new functions to the stack for processing. It follows the queue data structure to maintain the correct sequence in which all operations should be sent for execution.
+
+Whenever an async function is called, it is sent to a browser API. These are APIs built into the browser. Based on the command received from the call stack, the API starts its own single-threaded operation.
+
+An example of this is the setTimeout method. When a setTimeout operation is processed in the stack, it is sent to the corresponding API which waits till the specified time to send this operation back in for processing.
+
+Where does it send the operation? The event queue. Hence, we have a cyclic system for running async operations in JavaScript. The language itself is single-threaded, but the browser APIs act as separate threads.
+
+The event loop facilitates this process; it constantly checks whether or not the call stack is empty. If it is empty, new functions are added from the event queue. If it is not, then the current function call is processed.
+
+
+Question 7:
+building blocks of an angular application:
+Building blocks of Angular like components, directives, modules, services, component templates ,data binding ,metadata,
+dependency injection.
+Modules:
+Angular NgModules are different from other JavaScript modules. Every Angular 8 app has a root module known as AppModule. It provides the bootstrap mechanism that launches the application.
+Generally, every Angular 8 app contains many functional modules.
+Some important features of Anngular 8 Modules:
+Angular 8 NgModules import the functionalities form other NgModules just like other JavaScript modules.
+NgModules allow their own functionality to be exported and used by other NgModules. For example, if you want to use the router service in your app, you can import the Router NgModule.
+Template, Directives and Data Binding:
+a template is used to combine HTML with Angular Markup and modify HTML elements before displaying them. Template directives provide program logic, and binding markup connects your application data and the DOM.
+There are two types of data binding:
+1. Event Binding: Event binding is used to bind events to your app and respond to user input in the target environment by updating your application data.
+2. Property Binding: Property binding is used to pass data from component class and facilitates you to interpolate values that are computed from your application data into the HTML.
+Services and Dependency Injection:
+In Angular 8, developers create a service class for data or logic that isn't associated with a specific view, and they want to share across components.
+Dependency Injection (DI) is used to make your component classes lean and efficient. DI doesn't fetch data from the server, validate user input, or log directly to the console; it simply renders such tasks to services.
+metadata:
+The metadata for a component class associates it with a template that defines a view. A template combines ordinary HTML with Angular directives and binding markup that allow Angular to modify the HTML before rendering it for display.
+The metadata for a service class provides the information Angular needs to make it available to components through dependency injection (DI).
+
+Question 8:
+the advantages of using Angular in web app development:
+Angular is one of the most popular JavaScript frameworks developed and maintained by Google. It is an open-source front-end web framework based on TypeScript. 
+It is most suited for developing enterprise web applications because its code is reusable and maintainable.
+Angular supports two-way data-binding.
+It follows MVC pattern architecture.
+It supports static templates and Angular template.
+It facilitates you to add a custom directive.
+It also supports RESTfull services.
+Validations are supported in Angular.
+Angular provides client and server communication.
+It provides support for dependency injection.
+It provides powerful features like Event Handlers, Animation, etc.
+It provides the capability to create Single Page Application in a very clean and maintainable way.
+It provides data binding capability to HTML. Thus, it gives user a rich and responsive experience.
+AngularJS code is unit testable.
+AngularJS uses dependency injection and make use of separation of concerns.
+AngularJS provides reusable components.
+With AngularJS, the developers can achieve more functionality with short code.
+In AngularJS, views are pure html pages, and controllers written in JavaScript do the business processing.
+
+Question 9:
+Single Page Application and explain about the advantages:
+Single Page Applications (SPA) are a perfect choice for your business if you plan to build engaging, unique, and seamless experiences for your users.
+The most successful businesses in today’s fast-paced, dynamic, and competitive digital era are a testimony that being customer-centric is the only sustainable way of growing a business.
+ And the rapidly decreasing attention spans of users are pushing enterprises to dig newer and better ways of providing seamless experiences to customers.
+It is the reason why many organizations have started to build parts of their web applications using an emerging web design referred to as Single Page Application.
+Google and Facebook, the two giants whose apps drive your daily dose of the internet and social media activity, have also been built using SPAs
+In this blog, you will explore all aspects of a single page application, its benefits, pitfalls, and how it brings much-needed business value. But before we go ahead,
+ it is essential to mention here that web applications are divided into two types based on design pattern — single page application and multi-page application.
+ Advantages:
+ 1. Quick Loading Time
+A page taking over 200 milliseconds to load can significantly affect your online business and, eventually, sales.
+With the SPA approach, your full page loads quicker than traditional web applications, as it only has to load a page at the first request. On the other hand, traditional web apps have to load pages at every request, taking more time.
+2. Seamless User Experience
+SPAs deliver an experience like a desktop or mobile app. Users do not have to watch a new page load, as only the content changes and not the page, making the experience an enjoyable one.
+3. Ease in Building Feature-rich Apps
+SPA application makes it easy to add advanced features to a web application. For example, it is easier to build a content editing web app with real-time analysis using SPA development. Doing this with a traditional web app requires a total page reload to perform content analysis.
+4. Uses Less Bandwidth
+It is no surprise that SPAs consume less bandwidth since they only load web pages once. Besides that, they can also do well in areas with a slow internet connection. Hence, it is convenient for everyone to use, regardless of internet speed.
+
+
+Question 10:
+Data bindings in angular:
+Data binding deals with how to bind your data from component to HTML DOM elements (Templates). We can easily interact with application without worrying about how to insert your data.
+ We can make connections in two different ways one way and two-way binding.
+ One-way data binding:
+One-way data binding is a one-way interaction between component and its template. If you perform any changes in your component, then it will reflect the HTML elements. It supports the following types −
+
+String interpolation:
+In general, String interpolation is the process of formatting or manipulating strings. In Angular, Interpolation is used to display data from component to view (DOM). 
+It is denoted by the expression of {{ }} and also known as mustache syntax.
+Let’s create a simple string property in component and bind the data to view.
+Add the below code in test.component.ts file as follows −
+export class TestComponent implements OnInit { 
+   appName = "My first app in Angular 8"; 
+}
+Move to test.component.html file and add the below code −
+<h1>{{appName}}</h1>
+Add the test component in your app.component.html file by replacing the existing content as follows −
+<app-test></app-test>
+Event binding:
+Events are actions like mouse click, double click, hover or any keyboard and mouse actions. If a user interacts with an application and performs some actions, then event will be raised. It is denoted by either parenthesis () or on-.
+ We have different ways to bind an event to DOM element. Let’s understand one by one in brief.
+Component to view binding:
+Let’s understand how simple button click even handling works.
+
+Add the following code in test.component.tsfile as follows −
+
+export class TestComponent { 
+   showData($event: any){ 
+      console.log("button is clicked!"); if($event) { 
+         console.log($event.target); 
+         console.log($event.target.value); 
+      } 
+   } 
+}
+Property binding:
+Property binding is used to bind the data from property of a component to DOM elements. It is denoted by [].
+Let’s understand with a simple example.
+Add the below code in test.component.ts file.
+
+export class TestComponent { 
+   userName:string = "Peter"; 
+}
+Attribute binding:
+Attribute binding is used to bind the data from component to HTML attributes. The syntax is as follows −
+<HTMLTag [attr.ATTR]="Component data">
+For example,
+<td [attr.colspan]="columnSpan"> ... </td>
+Let’s understand with a simple example.
+Add the below code in test.component.ts file.
+export class TestComponent { 
+   userName:string = "Peter"; 
+}
+Class binding:
+Class binding is used to bind the data from component to HTML class property. The syntax is as follows −
+<HTMLTag [class]="component variable holding class name">
+Class Binding provides additional functionality. If the component data is boolean, then the class will bind only when it is true.
+ Multiple class can be provided by string (“foo bar”) as well as Array of string. Many more options are available.
+For example,
+
+<p [class]="myClasses">
+Style binding:
+Style binding is used to bind the data from component into HTML style property. The syntax is as follows −
+
+<HTMLTag [style.STYLE]="component data">
+For example,
+
+<p [style.color]="myParaColor"> ... </p>
+Two-way data binding:
+Two-way data binding is a two-way interaction, data flows in both ways (from component to views and views to component). Simple example is ngModel. If you do any changes in your property (or model) then, it reflects in your view and vice versa.
+ It is the combination of property and event binding.
+NgModel
+NgModel is a standalone directive. ngModel directive binds form control to property and property to form control. 
+syntax  −
+<HTML [(ngModel)]="model.name" />
+For example,
+<input type="text" [(ngModel)]="model.name" />
+Let’s try to use ngModel in our test application.
+Configure FormsModule in AppModule (src/app/app.module.ts)
+import { FormsModule } from '@angular/forms'; @NgModule({ 
+   imports: [ 
+      BrowserModule, 
+      FormsModule
+   ] 
+}) 
+export class AppModule { }

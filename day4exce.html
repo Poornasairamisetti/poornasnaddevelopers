@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //json-->js object notation
+        let empObj ={
+            //properties
+            firstName:"poorna",
+            lastName:"sai",
+            //function
+            getFullName:function(){
+                return this.firstName +"" +this.lastName;
+            },
+            //nested objects
+            address:{
+                doorNumber:1-14,
+                areaName:"main road ,kklr",
+                cityName:"kaikaluru"
+            }
+        };
+        empObj.mobileNumber = "7730922345";
+        if(!empObj.hasOwnProperty("mobileNumber")){
+            empObj.mobileNumber = "7726656327";
+        }
+        console.log(empObj);
+        document.write("<h1>first name:"+empObj.firstName);
+        document.write("<h1>lastName:"+empObj.fastName);
+        document.write("<h1>fullName is:"+empObj.getFullName());
+        document.write("<h1>Doornumber is:"+empObj.address.doorNumber);  
+         document.write("<h1>enter mobile number:"+empObj.mobileNumber);      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

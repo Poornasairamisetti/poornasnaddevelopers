@@ -1,0 +1,26 @@
+<h1>welcome</h1>
+<div class="container">
+  <div class="row">
+      <div class="col-12">
+          <a [routerLink]="['/']">Home</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+          <a [routerLink]="['/about']">About</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+          <a [routerLink]="['/service']">Service</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+          <a [routerLink]="['/contact']">Contact</a> 
+          
+      </div>
+  </div>
+  <br>
+  <div class="row" style="min-height:600px ;">
+      <div class="col-12">
+         <router-outlet></router-outlet>
+      </div>
+  </div>
+  <br>
+  <div class="row">
+      <div class="col-12">
+        Designed By:SNAD Developers
+      </div>
+  </div>
+
+
+</div>
